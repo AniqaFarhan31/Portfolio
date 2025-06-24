@@ -1,0 +1,172 @@
+:root {
+    --black: #121212;
+    --white: #ffffff;
+    --grey: #2a2a2a;
+    --light-grey: #dcdcdc;
+    --blue: #00bfff;
+    --highlight: #aeefff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    scroll-behavior: smooth;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Section */
+header {
+    background: var(--grey);
+    text-align: center;
+    padding: 3em 1em;
+    animation: fadeInUp 1s ease-out;
+    border-bottom: 3px solid var(--blue);
+}
+
+header h1 {
+    color: var(--highlight);
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    color: var(--light-grey);
+    font-style: italic;
+    margin-top: 0.5em;
+}
+
+/* Navbar Fix */
+nav {
+    margin-top: 1em;
+    text-align: center;
+    padding: 0.5em 0;
+}
+
+nav a {
+    display: inline-block;
+    color: var(--white);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+/* Sections */
+.section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background: var(--black);
+    animation: fadeInUp 1s ease;
+}
+
+.section:nth-child(even) {
+    background: var(--grey);
+}
+
+/* Card Styling */
+.card {
+    background: #1a1a1a;
+    border-left: 5px solid var(--blue);
+    padding: 2em;
+    border-radius: 15px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.015);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.card h2 {
+    color: var(--highlight);
+    border-bottom: 2px solid var(--blue);
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+}
+
+/* Skills List */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 0.5em 0;
+    border-bottom: 1px dashed var(--light-grey);
+    color: var(--white);
+}
+
+/* Form Styling */
+form input,
+form textarea {
+    width: 100%;
+    margin-top: 1em;
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+    background: var(--light-grey);
+    color: black;
+}
+
+form button {
+    background: var(--blue);
+    color: white;
+    font-weight: bold;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: var(--highlight);
+    color: black;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2em;
+    font-size: 0.9em;
+    background: var(--black);
+    color: var(--light-grey);
+    border-top: 2px solid var(--blue);
+}
+
+/* Projects Section */
+.project {
+    margin-bottom: 1.5em;
+}
+
+.project h3 {
+    color: var(--blue);
+    margin-bottom: 0.5em;
+}
+
+.project p {
+    color: var(--light-grey);
+}

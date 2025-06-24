@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aniqa Farhan | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Aniqa Farhan</h1>
+    <p>Front End Developer • Social Media Manager • Cyber Enthusiast</p>
+    
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+    <section class="section" id="about" data-aos="fade-right">
+        <div class="card">
+            <h2>👩‍💻 About Me</h2>
+            <p> I'm Aniqa - a passionate tech explorer currently pursuing my BS in Computer Science and enrolled in an exciting AI & Metaverse specialization. I'm a cybersecurity enthusiast who loves staying ahead in the digital world, and I actively apply my creativity working as a Social Media Manager, blending strategy, design, and storytelling. I thrive at the intersection of technology, innovation, and digital branding.</p>
+        </div>
+    </section>
+
+    <section class="section" id="education" data-aos="fade-left">
+        <div class="card">
+            <h2>🎓 Education</h2>
+            <p><strong>Bachelor’s in Computer Science</strong> <br> ILMA University, 2025 – 2029</p>
+            <p><strong>Intermediate </strong> <br> Khursheed Govt.Girls Degree College, 2022 – 2024</p>
+            <p><strong>Matriculation </strong> <br> The Kent City School, 2022</p>
+<h4>📚 Ongoing Specialization:</h4>
+<p><strong>AI, Metaverse and Web 3</strong> <br> Governor House, Sindh, 2024-2025</p> 
+
+            
+        </div>
+    </section>
+
+    <section class="section" id="skills" data-aos="fade-right">
+        <div class="card">
+            <h2>🛠️ Skills</h2>
+            <ul>
+                <li>HTML, CSS, PYTHON</li>
+                <li>Responsive Design</li>
+                <li>Problem Solving</li>
+                <li>Content Creation / Platform Expertise</li>
+                <li>UX Principles</li>
+                <li>Video Editing </li>
+                <li>MS Office </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" id="projects" data-aos="fade-up">
+    <div class="card">
+        <h2>🚀 Projects</h2>
+
+        <div class="project">
+            <h3>📚 Personal Library Manager</h3>
+            <p>A Python CLI app that manages a book library with features like search, add/remove, and save/load using JSON.</p>
+        </div>
+
+        <div class="project">
+            <h3>🌐 Responsive Portfolio Website</h3>
+            <p>Designed and developed this responsive personal portfolio using HTML, CSS, and Flask showcasing my work and contact features.</p>
+        </div>
+
+        <div class="project">
+            <h3>🎣 Phishing URL Detector</h3>
+            <p>A machine learning-based app that identifies and flags suspicious phishing URLs for user protection.</p>
+        </div>
+
+        <div class="project">
+            <h3>🔐 Password Generator & Strength Checker</h3>
+            <p>A Python GUI app that generates secure passwords and checks their strength based on multiple criteria.</p>
+        </div>
+
+        <div class="project">
+            <h3>🔄 Unit Converter</h3>
+            <p>A simple Python app to convert between different units such as length, weight, and temperature.</p>
+        </div>
+
+        <div class="project">
+            <h3>🧮 Calculator</h3>
+            <p>A clean and interactive calculator built using HTML, CSS, and JavaScript for basic arithmetic operations.</p>
+        </div>
+
+        <div class="project">
+            <h3>💱 Currency Converter</h3>
+            <p>A real-time currency converter app using API integration to fetch and convert global exchange rates.</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <section class="section" id="experience" data-aos="fade-left">
+        <div class="card">
+            <h2>💼 Experience</h2>
+            <p><strong>Social Media Manager (Freelance)</strong><br>Social Media Manager with 2 years of experience creating and managing content for TikTok, YouTube, and Instagram ,including video editing and trend-driven campaigns.</p>
+        </div>
+    </section>
+
+    <section class="section" id="contact" data-aos="fade-up">
+        <div class="card">
+            <h2>📬 Contact Me</h2>
+            <form action="/contact" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+</form>
+
+<!-- Flash message -->
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <p style="color:lightgreen;">{{ messages[0] }}</p>
+  {% endif %}
+{% endwith %}
+
+        </div>
+    </section>
+
+    <footer>
+       <p>&copy; 2025 <strong>Aniqa Farhan</strong> All rights reserved.</p>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+
+</body>
+</html>
